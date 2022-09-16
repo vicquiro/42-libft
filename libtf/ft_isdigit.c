@@ -6,13 +6,13 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 18:53:01 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/13 19:37:46 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/16 18:41:21 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c >= 49 && c <= 57)
+	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
 }

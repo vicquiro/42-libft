@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:06:12 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/16 16:27:00 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/16 18:42:00 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,23 @@ int				ft_memcmp(const void *s1, const void *s2, size_t n); // OK
 
 //void	*ft_memmove(void *dst, const void *src, size_t len);
 
+//void	*ft_calloc(size_t count, size_t size);
+
 void			ft_bzero(void *s, size_t n); // OK
 char			*ft_strchr(const char *s, int c); // OK
 char			*ft_strrchr(const char *s, int c); // **
 
+//char 	*ft_strdup(const char *s1);
 //char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-int				ft_atoi(const char *str);
+
+int				ft_atoi(const char *str); // OK
 int				ft_isalpha(int c); // OK
-int				ft_isdigit(int c); // *
-int				ft_isalnum(int c); // * 
+int				ft_isdigit(int c); // OK
+int				ft_isalnum(int c); // OK 
 int				ft_isascii(int c); // OK
 int				ft_isprint(int c); // OK
 int				ft_strncmp(char *s1, char *s2, unsigned int n); // OK
 int				ft_tolower(int c); // OK 
 int				ft_toupper(int c); // OK
-
 
 #endif
