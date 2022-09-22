@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:06:12 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/22 15:51:00 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/22 18:00:11 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void			*ft_memchr(const void *s, int c, size_t n); // OK
 int				ft_memcmp(const void *s1, const void *s2, size_t n); // OK
 void			*ft_memmove(void *dst, const void *src, size_t len);
 
-//void	*ft_calloc(size_t count, size_t size);
+void			*ft_calloc(size_t count, size_t size); //OK
 
 void			ft_bzero(void *s, size_t n); // OK
 char			*ft_strchr(const char *s, int c); // OK
