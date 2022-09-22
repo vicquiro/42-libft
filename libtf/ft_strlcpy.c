@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:56:39 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/16 18:50:41 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/22 13:33:28 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < dstsize)
+	if (dstsize != 0)
 	{
-		dst[i] = src[i];
-		i++;
-	}
-	if (i != 0)
+		while (src[i] != '\0' && i < (dstsize - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
 		dst [i] = '\0';
+	}
 	return (ft_strlen(src));
 }

@@ -6,10 +6,9 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:18:32 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/16 13:40:05 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/22 13:35:14 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 int	ft_toupper(int c)
 {
