@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:09:24 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/14 12:14:06 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/22 13:12:39 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	{
 		if (s1[i] > s2[i])
 		{
-			return (s1[i] - s2[i]);
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		}
 		if (s1[i] < s2[i])
 		{
-			return (s1[i] - s2[i]);
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		}
 		i++;
 	}
