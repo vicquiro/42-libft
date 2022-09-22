@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 15:53:32 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/16 16:02:39 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/21 16:30:23 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	aux = (unsigned char *)s;
-	while (n > 0)
+	while (n > (size_t) i)
 	{
-		if (aux[i] == c)
+		if (aux[i] == (unsigned char) c)
 			return ((void *)aux + i);
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:53:44 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/16 15:47:27 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/21 16:18:28 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	int		last_index;
 	char	*ret;
 
 	ret = 0;
-	i = 0;
-	while (s[i])
+	last_index = ft_strlen(s);
+	while (last_index >= 0)
 	{
-		if (s[i] == (char) c)
-			ret = ((char *)s + i);
-		i++;
+		if (s[last_index] == (unsigned char) c)
+		{
+			ret = ((char *)s + last_index);
+			return (ret);
+		}
+		last_index--;
 	}
 	return (ret);
-
 }
