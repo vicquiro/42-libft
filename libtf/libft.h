@@ -6,13 +6,14 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:06:12 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/23 14:35:37 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/23 19:57:40 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 size_t			ft_strlcat(char *dest, char *src, size_t dstsize);// OK
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);//OK
@@ -38,5 +39,10 @@ int				ft_isprint(int c);// OK
 int				ft_strncmp(char *s1, char *s2, unsigned int n);// OK
 int				ft_tolower(int c);// OK 
 int				ft_toupper(int c);// OK
+
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 
 #endif

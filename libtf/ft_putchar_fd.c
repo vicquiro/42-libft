@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 18:33:04 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/23 18:49:10 by vquiroga         ###   ########.fr       */
+/*   Created: 2022/09/23 19:17:45 by vquiroga          #+#    #+#             */
+/*   Updated: 2022/09/23 19:20:35 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	total_len;
-	void	*dst;
-
-	total_len = count * size;
-	dst = malloc(total_len);
-	if (!dst || total_len / size != count)
-		return (0);
-	ft_bzero(dst, total_len);
-	return (dst);
+	write(fd, &c, 1);
 }
