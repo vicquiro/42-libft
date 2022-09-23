@@ -12,8 +12,11 @@ RM		= rm -f
 all:	${LIB}
 
 ${LIB}:		${OBJS}
-		@ar rc ${LIB} ${OBJS}
-		@ranlib ${LIB}
+			@ar rc ${LIB} ${OBJS}
+			@ranlib ${LIB}
+# so:			
+# 			$(CC) -nostartfiles -fPIC $(CFLAGS) $(CFILES)
+# 			gcc -nostartfiles -shared -o libft.so $(OBJS)
 .c.o:
 			@${CC} ${CFLAGS} -c $< -o ${<:.c=.o} 
 
