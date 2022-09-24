@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: vkyro <vkyro@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:06:12 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/23 19:57:40 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/24 19:09:20 by vkyro            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int				ft_tolower(int c);// OK
 int				ft_toupper(int c);// OK
 
 char            *ft_substr(char const *s, unsigned int start, size_t len);
-
+char            *ft_strjoin(char const *s1, char const *s2);
+void            ft_striteri(char *s, void (*f)(unsigned int, char*));
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
