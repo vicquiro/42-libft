@@ -19,10 +19,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     i = 0;
     total_len = ft_strlen(s);
     if (((start + len) > total_len))
-        return (0);
+        return (NULL);
     substring = malloc(sizeof(char) * (len + 1));
-    if (!substring)
-        return (0);
+    if (!substring || !s)
+        return (NULL);
     while (start < (start + len) && (size_t)i < len)
     {
         substring[i] = s[start];
