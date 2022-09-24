@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -9,13 +8,13 @@ void	ft_putnbr_fd(int n, int fd)
 	if (nbr < 0)
 	{
 		write(fd, "-", 1);
-        if (n == -2147483648)
+		if (n == -2147483648)
 		{
 			ft_putchar_fd('2', fd);
 			nbr = 147483648;
 		}
-        else
-            nbr = (nbr * -1);
+		else
+			nbr = (nbr * -1);
 	}
 	if (nbr >= 10)
 	{

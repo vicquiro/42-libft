@@ -40,6 +40,8 @@ int				ft_strncmp(char *s1, char *s2, unsigned int n);// OK
 int				ft_tolower(int c);// OK 
 int				ft_toupper(int c);// OK
 
+char            *ft_substr(char const *s, unsigned int start, size_t len);
+
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
