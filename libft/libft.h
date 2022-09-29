@@ -3,17 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vkyro <vkyro@student.42.fr>                +#+  +:+       +#+        */
+/*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:06:12 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/24 20:51:00 by vkyro            ###   ########.fr       */
+/*   Updated: 2022/09/29 12:49:18 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 size_t			ft_strlcat(char *dest, char *src, size_t dstsize);// OK
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);//OK

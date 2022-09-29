@@ -1,14 +1,18 @@
-#include "libft.h"
-// #include <stdio.h>
-// size_t	ft_strlen(const char *s)
-// {
-// 	size_t	i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/29 13:00:58 by vquiroga          #+#    #+#             */
+/*   Updated: 2022/09/29 13:01:02 by vquiroga         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// 	i = 0;
-// 	while (s[i] != '\0')
-// 		i++;
-// 	return (i);
-// }
+
+#include "libft.h"
+
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -17,11 +21,14 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     int i;
 
     i = 0;
+    if (!s)
+        return (0);
+    if (start > ft_strlen(s))
+        len = 0;
     total_len = ft_strlen(s);
-    if (((start + len) > total_len))
-        return (NULL);
+
     substring = malloc(sizeof(char) * (len + 1));
-    if (!substring || !s)
+    if (!substring)
         return (NULL);
     while (start < (start + len) && (size_t)i < len)
     {
@@ -29,17 +36,16 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
         start++;
         i++;
     }
+
     substring[i] = '\0';
     return (substring);
 }
 
 // int main(void)
 // {
-//     char	str[] = "lorem ipsum dolor sit amet";
-// 	char	*strsub;
+//     char *str = "01234";
+//     size_t size = 10;
 
-//     strsub = ft_substr(str, 7, 10);
-//     printf("%s\n",strsub);
+//     ft_substr(str, 10, size);
 //     return (0);
 // }
-

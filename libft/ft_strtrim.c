@@ -1,4 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/29 12:15:57 by vquiroga          #+#    #+#             */
+/*   Updated: 2022/09/29 13:11:02 by vquiroga         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "libft.h"
+
 // Parámetros  s1: La string que debe ser recortada.
 //             set: Los caracteres a eliminar de la string.
 
@@ -53,10 +67,12 @@ char *ft_strtrim(char const *s1, char const *set)
     char *str_out;
 
     counter = counter_chars(s1, set);
-    str_out = malloc(sizeof(char) * (ft_strlen(s1) - counter) + 1);
-    if (!str_out || !s1 || !set)
+    
+    if (!s1 || !set)
         return (0);
-
+    str_out = ft_calloc((ft_strlen(s1) - counter) + 1, sizeof(char));
+    if(!str_out)
+        return (0);
     i = 0;
     k = 0;    
     while (s1[i] != '\0')
@@ -76,6 +92,5 @@ char *ft_strtrim(char const *s1, char const *set)
         }
         i++;
     }
-    str_out[k] = '\0';
     return (str_out);
 }
