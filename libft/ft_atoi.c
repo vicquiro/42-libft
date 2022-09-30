@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 16:27:14 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/23 19:12:31 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/29 18:59:57 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,6 @@ int	ft_atoi(const char *str)
 	if (res > LONG_MAX && neg == 0)
 		return (-1);
 	if (neg == 1)
-		res = res * (-1);
+		return (-res);
 	return (res);
 }

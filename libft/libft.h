@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:06:12 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/29 12:49:18 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:15:15 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ int				ft_strncmp(char *s1, char *s2, unsigned int n);// OK
 int				ft_tolower(int c);// OK 
 int				ft_toupper(int c);// OK
 
-char            *ft_substr(char const *s, unsigned int start, size_t len);
-char            *ft_strjoin(char const *s1, char const *s2);
-char            *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char            *ft_strtrim(char const *s1, char const *set);
-void            ft_striteri(char *s, void (*f)(unsigned int, char*));
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char			*ft_strtrim(char const *s1, char const *set);
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
