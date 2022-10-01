@@ -1,5 +1,6 @@
 libftTester/
 libft-war-machine/
+libft-unit-test/
 
 # Prerequisites
 *.d

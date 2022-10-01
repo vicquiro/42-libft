@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
 // Parámetros  s1: La string que debe ser recortada.
@@ -95,16 +94,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		s2[j++] = s1[k++];
 	return (s2);
 }
-
-/*
-int main()
-{
-	char *s1 = "    hiola oue otpal  a      ";
-	char *s2 = "oqtp ";
-
-//	s2 [0] = 'o';
-//	s2 [1] = 'q';
-//	s2 [2] = 't';
-	printf("%s\n",ft_strtrim(s1,s2));
-	return 0;
-}*/
