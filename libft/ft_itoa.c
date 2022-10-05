@@ -1,3 +1,4 @@
+
 /*
 Descripción:
 		 Utilizando malloc(3), genera una string que
@@ -13,79 +14,70 @@ Valor devuelto:
 #include <limits.h>
 #include <stdio.h>
 
-static char	write_nbr(int nbr)
-{
-	unsigned int	num;
 
-	num = nbr;
-	if (num == 0)
-		return (0 + '0');
-	if (num > 0)
-	{
-		write_nbr(num / 10);
-		num = num % 10;
+static int	get_lenght_number(int n)
+{
+	int	i;
+	int	j;
+
+	i = n;
+	j = 0;
+	if (n == 0)
+		return (1);
+	while (i != 0)
+	{	
+		i = i / 10;
+		j++;
 	}
-	return (num + '0');
+	return (j);
 }
 
-static size_t	get_lenght(int nbr)
+static unsigned int	sign_change(int n, int *sign)
 {
-	unsigned int	num;
-	size_t			len;
+	unsigned int	i;
 
-	len = 0;
-	if (nbr < 0)
+	i = n;
+	if (n < 0)
 	{
-		num = (unsigned int)-nbr;
-		len++;
+		i = n * (-1);
+		*sign = -1;
 	}
-	else
-		num = (unsigned int)nbr;
-	while (num >= 10)
-	{
-		num = num / 10;
-		len++;
-	}
-	len++;
-	return (len);
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
-	unsigned int	number;
-	size_t			len;
-	char			*result;
-	int				i;
+	int				j;
+	char			*num;
+	int				sign;
+	unsigned int	i;
 
-	i = 0;
-	len = get_lenght(n);
-	result = ft_calloc((len + 1), sizeof(char));
-	if (!result)
-		return (0);
-	if (n < 0)
-	{
-		number = (unsigned int)-n;
-		result[0] = '-';
-		i++;
-	}
+	sign = 1;
+	j = get_lenght_number(n);
+	i = sign_change(n, &sign);
+	if (sign == 1)
+		num = (char *) malloc(sizeof(char) * ((j) + 1));
 	else
-		number = (unsigned int)n;
-	while (i < (int)len)
-	{
-		//printf("result[%d - %d]\n",(int)len, i);
-		result[(int)len - i] = write_nbr(number);
-		number = number / 10;
-		i++;
+		num = (char *) malloc(sizeof(char) * ((j++) + 2));
+	if (!num)
+		return (0);
+	num[j] = 0;
+	while (j--)
+	{	
+		num[j] = (i % 10) + '0';
+		i = i / 10;
 	}
-	result[len] = '\0';
-	return (result);
+	if (sign == -1)
+		num[0] = '-';
+	return (num);
 }
 
 // int main(void)
 // {
 // 	char *s;
 // 	s = ft_itoa(INT_MAX); 
-// 	//s = ft_itoa(INT_MIN);
+// 	printf("%s\n",s);
+// 	s = ft_itoa(INT_MIN);
 // 	printf("%s\n",s);
 // 	return (0);
 // }
