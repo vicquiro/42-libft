@@ -9,14 +9,11 @@
 #    Updated: 2022/09/29 15:57:33 by vquiroga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-
 CC = gcc
 CFLAGS = -c -Wall -Wextra -Werror
 AR = ar -rcs
 NAME = libft.a
 RM = rm -rf
-
 ################################################################################
 ##								MANDATORY									  ##
 ################################################################################
@@ -66,10 +63,10 @@ CBONUS = \
 		ft_lstsize.c \
 		ft_lstlast.c \
 		ft_lstadd_back.c \
-		ft_lstdelone.c 
-#		ft_lstclear.c \
-		ft_lstiter.c 
-#		ft_lstmap.c
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 OBJS = $(CFILES:.c=.o)
 BOBJS = $(CBONUS:.c=.o)

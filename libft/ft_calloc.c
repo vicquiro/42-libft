@@ -18,8 +18,10 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*dst;
 
 	total_len = count * size;
+	if (total_len && (total_len / size != count))
+		return (0);
 	dst = malloc(total_len);
-	if (!dst || (total_len && total_len / size != count))
+	if (!dst)
 		return (0);
 	ft_bzero(dst, total_len);
 	return (dst);
