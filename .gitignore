@@ -3,7 +3,7 @@ libft-war-machine/
 libft-unit-test/
 .DS_STORE
 
-*/*.vscode
+*/.vscode
 
 # Prerequisites
 *.d
