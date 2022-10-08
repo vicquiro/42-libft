@@ -6,11 +6,9 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:24:50 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/13 19:37:34 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/06 18:16:10 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

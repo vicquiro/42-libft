@@ -1,22 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/06 14:48:48 by vquiroga          #+#    #+#             */
+/*   Updated: 2022/10/08 12:30:25 by vquiroga         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-
-/**
- * @brief Itera la lista ’lst’ y aplica la función ’f’ al
-        contenido de cada nodo. Crea una lista resultante
-        de la aplicación correcta y sucesiva de la función
-        ’f’ sobre cada nodo. La función ’del’ se utiliza
-        para eliminar el contenido de un nodo, si hace falta.
- * @param lst  Puntero a un nodo
-
- * @param f  dirección de un puntero a una función usada
-            en la iteración de cada elemento de la lista.
- 
- * @param del  Puntero a función utilizado para eliminar
-                el contenido de un nodo, si es necesario 
- 
- * @return t_list*  La nueva lista.
-                    NULL si falla la reserva de memoria.
- */
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

@@ -6,15 +6,11 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:55:45 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/29 18:35:18 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/08 12:30:24 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// s1: La primera string.
-// s2: La string a añadir a ’s1’.
-// Valor devuelto:  La nueva string.
-//                  NULL si falla la reserva de memoria
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

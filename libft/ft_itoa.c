@@ -1,19 +1,16 @@
-
-/*
-Descripción:
-		 Utilizando malloc(3), genera una string que
-		represente el valor entero recibido como argumento.
-		Los números negativos tienen que gestionarse.
-
-Valor devuelto:
-			 La string que represente el número.
-			NULL si falla la reserva de memoria.
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/06 15:07:41 by vquiroga          #+#    #+#             */
+/*   Updated: 2022/10/08 12:30:27 by vquiroga         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
-#include <stdio.h>
-
 
 static int	get_lenght_number(int n)
 {
@@ -71,13 +68,3 @@ char	*ft_itoa(int n)
 		num[0] = '-';
 	return (num);
 }
-
-// int main(void)
-// {
-// 	char *s;
-// 	s = ft_itoa(INT_MAX); 
-// 	printf("%s\n",s);
-// 	s = ft_itoa(INT_MIN);
-// 	printf("%s\n",s);
-// 	return (0);
-// }

@@ -6,17 +6,12 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:51:21 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/29 19:01:56 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/08 12:30:22 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// A cada carácter de la string ’s’, aplica la
-// función ’f’ dando como parámetros el índice de cada
-// carácter dentro de ’s’ y el propio carácter. Genera
-// una nueva string con el resultado del uso sucesivo
-// de ’f’
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char				*str_out;

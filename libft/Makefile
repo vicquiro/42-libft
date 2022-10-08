@@ -6,14 +6,19 @@
 #    By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 15:45:09 by vquiroga          #+#    #+#              #
-#    Updated: 2022/09/29 15:57:33 by vquiroga         ###   ########.fr        #
+#    Updated: 2022/10/06 18:18:15 by vquiroga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 CC = gcc
-CFLAGS = -c -Wall -Wextra -Werror
-AR = ar -rcs
+CFLAGS = -Wall -Wextra -Werror
+AR = ar 
+ARFLAGS = -rcs
 NAME = libft.a
 RM = rm -rf
+HDRS = libft.h
+
+
 ################################################################################
 ##								MANDATORY									  ##
 ################################################################################
@@ -72,21 +77,24 @@ OBJS = $(CFILES:.c=.o)
 BOBJS = $(CBONUS:.c=.o)
 ################################################################################
 
+ifdef WITH_BONUS
+	TOTAL_OBJS = $(OBJS) $(BOBJS)
+else
+	TOTAL_OBJS = $(OBJS)
+endif
+
 ################################################################################
 .PHONY: all re fclean clean bonus bclean
 ################################################################################
 
-all:        bonus $(NAME)
-
-$(NAME):	$(OBJS)
-			@$(AR) $(NAME) $(OBJS)
-
-%.o:%.c
-			$(CC) $(CFLAGS) -c $^ -o $@
-
-bonus:		$(OBJS) $(BOBJS)
-			@$(AR) $(NAME) $(OBJS) $(BOBJS)
+all:        $(NAME)
+$(NAME):		$(TOTAL_OBJS)
+				@$(AR) $(ARFLAGS) $@ $^
+bonus:		
+			@make WITH_BONUS=1
 			
+.c.o:
+		 ${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I ${HDRS}
 
 re:     	fclean all
 
@@ -98,3 +106,4 @@ clean:		bclean
 
 bclean:
 			@$(RM) $(BOBJS)
+

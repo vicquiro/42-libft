@@ -6,23 +6,11 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:15:57 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/29 13:11:02 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/08 12:30:21 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// Parámetros  s1: La string que debe ser recortada.
-//             set: Los caracteres a eliminar de la string.
-
-// Valor devuelto: La string recortada.
-//                 NULL si falla la reserva de memoria.
-
-// Descripción: Elimina todos los caracteres de la string ’set’
-// desde el principio y desde el final de ’s1’, hasta
-// encontrar un caracter no perteneciente a ’set’. La
-// string resultante se devuelve con una reserva de
-// malloc(3)
 
 int	get_last_pos(char const *s1, char const *set)
 {	

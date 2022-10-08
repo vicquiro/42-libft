@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 19:06:12 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/09/29 15:15:15 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/08 12:28:47 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }t_list;
-
-
 
 // BONUS //
 t_list			*ft_lstnew(void *content);
@@ -35,7 +34,6 @@ void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
 void (*del)(void *));
-
 
 // MANDATORY //
 size_t			ft_strlcat(char *dest, char *src, size_t dstsize);
