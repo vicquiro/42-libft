@@ -1,5 +1,6 @@
 # 42-libft
 
+The aim of this project is to code basic C functions, which are then compiled into a library for use in other projects of the 42cursus.
 
 ## Instructions
 
